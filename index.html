@@ -3,32 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <title>Simple test form</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <div class="container">
- <form action="https://simple-test-form.herokuapp.com/send_email" method="POST">
-  <div class="form-group">
-    <label>Name</label>
-    <input type="text" name="name" class="form-control" placeholder="Name" required>
+  <h1>This is a simple survey</h1>
+
+  <form action="">
+    <h3>1. What would you prefer? </h3>
+    <div class="row">
+      <div class="col-xs-6 left">
+        <div class="form-group">
+          <input type="button" id="q1a" name="question1" class="image-option partial-rad" style="background-image: url(images/Hiking-adventures.jpg)">
+          <label class="custom-control-label" for="q1a">a mountain hike</label>
+        </div>
+      </div>
+      <div class="col-xs-6 right">
+        <div class="form-group">
+          <input type="button" id="q1b" name="question1" class="image-option partial-rad" style="background-image: url(images/Spray-Party.jpeg)">
+          <label class="custom-control-label" for="q1b">a kickass beach party</label>
+        </div>
+      </div>
+    </div>
+  </form>
+
+    <form action="">
+      <div class="row">
+        <div class="col-xs-4 left">
+          <div class="form-group text-center">
+            <input type="button" id="q2a" name="question2" class="image-option full-round" style="background-image: url(images/coachella.jpg)">
+            <label class="custom-control-label" for="q2a">Coachella</label>
+          </div>
+        </div>
+        <div class="col-xs-4 middle">
+          <div class="form-group text-center">
+            <input type="button" id="q2b" name="question2" class="image-option full-round" style="background-image: url(images/iphone.jpg)">
+            <label class="custom-control-label" for="q2b">iPhone XS</label>
+          </div>
+        </div>
+        <div class="col-xs-4 right">
+          <div class="form-group text-center">
+            <input type="button" id="q2c" name="question2" class="image-option full-round" style="background-image: url(images/europe-trip.jpg)">
+            <label class="custom-control-label" for="q2b">Europe Vacation</label>
+          </div>
+        </div>
+      </div>
+    </form>
+
+
+  <!-- Group of default radios - option 1 -->
+  <div class="custom-control custom-radio">
+    <input type="radio" class="custom-control-input" id="defaultGroupExample1" name="groupOfDefaultRadios">
+    <label class="custom-control-label" for="defaultGroupExample1">Option 1</label>
   </div>
-  <div class="form-group">
-    <label>Your Email</label>
-    <input type="email" name="email" class="form-control" placeholder="Your E-mail" required>
+
+  <!-- Group of default radios - option 2 -->
+  <div class="custom-control custom-radio">
+    <input type="radio" class="custom-control-input" id="defaultGroupExample2" name="groupOfDefaultRadios" checked>
+    <label class="custom-control-label" for="defaultGroupExample2">Option 2</label>
   </div>
-  <div class="form-group">
-    <label>Subject</label>
-    <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+
+  <!-- Group of default radios - option 3 -->
+  <div class="custom-control custom-radio">
+    <input type="radio" class="custom-control-input" id="defaultGroupExample3" name="groupOfDefaultRadios">
+    <label class="custom-control-label" for="defaultGroupExample3">Option 3</label>
   </div>
-  <div class="form-group">
-    <textarea class="form-control" name="message" rows="7" placeholder="Message" required>
-    </textarea>
-  </div>
-  <div class="text-center">
-    <input type="submit" value="Submit" class="btn btn-primary">
-  </div>
-</form>
+
+
+  <form action="https://simple-test-form.herokuapp.com/send_email" method="POST">
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" name="name" class="form-control" placeholder="Name" required>
+    </div>
+    <div class="form-group">
+      <label>Your Email</label>
+      <input type="email" name="email" class="form-control" placeholder="Your E-mail" required>
+    </div>
+    <div class="form-group">
+      <label>Subject</label>
+      <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+    </div>
+    <div class="form-group">
+      <textarea class="form-control" name="message" rows="7" placeholder="Message" required>
+      </textarea>
+    </div>
+    <div class="text-center">
+      <input type="submit" value="Submit" class="btn btn-primary">
+    </div>
+  </form>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

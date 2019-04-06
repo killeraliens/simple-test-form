@@ -1,0 +1,24 @@
+.image-option {
+  height: 200px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.image-option > input {
+  -webkit-appearance: none !important;
+}
+
+
+
+.partial-rad {
+  border-radius: 8px;
+}
+
+.full-round {
+  border-radius: 50%;
+  width: 200px;
+}
+
+

@@ -38,5 +38,5 @@ post '/send_email' do
   settings.mail_options[:subject] = "New message via contact form"
 
   Pony.mail(settings.mail_options)
-  redirect "http://https://goats-guide.herokuapp.com"
+  redirect "http://goats-guide.herokuapp.com"
 end
